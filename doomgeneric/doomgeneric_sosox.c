@@ -1,6 +1,8 @@
 //doomgeneric for soso os (nano-x version)
 //TODO: get keys from X, not using direct keyboard access!
 
+#if 0
+
 #include "doomkeys.h"
 #include "m_argv.h"
 #include "doomgeneric.h"
@@ -270,3 +272,5 @@ int main(int argc, char **argv)
 
     return 0;
 }
+
+#endif // 0

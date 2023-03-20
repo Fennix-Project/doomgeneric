@@ -1,3 +1,5 @@
+#if 0
+
 #include "doomkeys.h"
 
 #include "doomgeneric.h"
@@ -212,3 +214,5 @@ int main(int argc, char **argv)
 
     return 0;
 }
+
+#endif // 0

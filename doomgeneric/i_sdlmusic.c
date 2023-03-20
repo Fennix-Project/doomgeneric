@@ -16,6 +16,8 @@
 //	System interface for music.
 //
 
+#if 0
+
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -1314,3 +1316,4 @@ music_module_t DG_music_module =
     I_SDL_PollMusic,
 };
 
+#endif // 0

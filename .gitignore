@@ -1,3 +1,5 @@
 *.o
 *.obj
 *.DS_Store
+file_dump.map
+file.map

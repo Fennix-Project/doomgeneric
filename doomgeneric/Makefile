@@ -3,7 +3,7 @@ include ../../../../../../Makefile.conf
 
 FILENAME = doom.elf
 
-SYSROOT = --sysroot=../../../../out/system/
+SYSROOT = --sysroot=../../../../../out/system/
 
 CC = ../../../../../../$(TC_COMPILER_PATH)/$(TC_COMPILER_ARCH)gcc
 CPP = ../../../../../../$(TC_COMPILER_PATH)/$(TC_COMPILER_ARCH)g++
@@ -51,7 +51,7 @@ endif
 
 build: $(FILENAME)
 	$(OBJDUMP) -d $(FILENAME) > file_dump.map
-	mv $(FILENAME) ../../../out/system/$(FILENAME)
+	mv $(FILENAME) ../../../../../out/system/$(FILENAME)
 
 $(FILENAME): $(OBJ)
 	$(info Linking $@)

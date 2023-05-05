@@ -51,7 +51,7 @@ endif
 
 build: $(FILENAME)
 	$(OBJDUMP) -d $(FILENAME) > file_dump.map
-	mv $(FILENAME) ../../../../../out/system/$(FILENAME)
+	mv $(FILENAME) ../../../../../out/system/bin/$(FILENAME)
 
 $(FILENAME): $(OBJ)
 	$(info Linking $@)

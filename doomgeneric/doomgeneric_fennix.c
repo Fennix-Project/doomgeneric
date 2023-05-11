@@ -63,10 +63,13 @@ static void addKeyToQueue(int pressed, unsigned char keyCode)
 
 void DG_Init()
 {
+	memset(s_KeyQueue, 0, KEYQUEUE_SIZE * sizeof(unsigned short));
 }
 
 void DG_DrawFrame()
 {
+	syscall1(_Print, 'H');
+		// StretchDIBits(s_Hdc, 0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, 0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, DG_ScreenBuffer);
 }
 
 void DG_SleepMs(uint32_t ms)
@@ -76,7 +79,8 @@ void DG_SleepMs(uint32_t ms)
 
 uint32_t DG_GetTicksMs()
 {
-	return 0; // TODO
+	static uint32_t stub;
+	return ++stub; // TODO
 }
 
 int DG_GetKey(int* pressed, unsigned char* doomKey)
@@ -102,6 +106,14 @@ int DG_GetKey(int* pressed, unsigned char* doomKey)
 
 void DG_SetWindowTitle(const char * title)
 {
+	for (int i = 0; i < 14; i++)
+		syscall1(_Print, "Window Title: "[i]);
+
+	for (int i = 0; title[i] != '\0'; i++)
+	{
+		syscall1(_Print, title[i]);
+	}
+	syscall1(_Print, '\n');
 }
 
 int main(int argc, char **argv)

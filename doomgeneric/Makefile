@@ -44,7 +44,7 @@ ifeq ($(DEBUG), 1)
 endif
 
 build: $(FILENAME)
-	mv $(FILENAME) $(WORKSPACE)out/bin/$(FILENAME)
+	mv $(FILENAME) $(WORKSPACE)out/usr/bin/$(FILENAME)
 
 $(FILENAME): $(OBJ)
 	$(info Linking $@)

@@ -808,7 +808,7 @@ void R_SortVisSprites (void)
     vsprsortedhead.next = vsprsortedhead.prev = &vsprsortedhead;
     for (i=0 ; i<count ; i++)
     {
-	bestscale = INT_MAX;
+	bestscale = __INT_MAX__;
         best = unsorted.next;
 	for (ds=unsorted.next ; ds!= &unsorted ; ds=ds->next)
 	{

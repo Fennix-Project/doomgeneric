@@ -694,7 +694,7 @@ P_TraverseIntercepts
 	
     while (count--)
     {
-	dist = INT_MAX;
+	dist = __INT_MAX__;
 	for (scan = intercepts ; scan<intercept_p ; scan++)
 	{
 	    if (scan->frac < dist)
@@ -722,7 +722,7 @@ P_TraverseIntercepts
         if ( !func (in) )
 	    return false;	// don't bother going farther
 
-	in->frac = INT_MAX;
+	in->frac = __INT_MAX__;
     }
 	
     return true;		// everything was traversed

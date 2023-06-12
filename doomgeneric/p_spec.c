@@ -394,7 +394,7 @@ P_FindLowestCeilingSurrounding(sector_t* sec)
     int			i;
     line_t*		check;
     sector_t*		other;
-    fixed_t		height = INT_MAX;
+    fixed_t		height = __INT_MAX__;
 	
     for (i=0 ;i < sec->linecount ; i++)
     {

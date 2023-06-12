@@ -301,7 +301,7 @@ static int FindNearestColor(byte *palette, int r, int g, int b)
     int i;
 
     best = 0;
-    best_diff = INT_MAX;
+    best_diff = __INT_MAX__;
 
     for (i=0; i<256; ++i)
     {

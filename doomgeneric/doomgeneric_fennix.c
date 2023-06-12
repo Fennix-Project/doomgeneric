@@ -3,7 +3,7 @@
 #include "doomgeneric.h"
 
 #include <stdio.h>
-#include <sys/syscalls.h>
+#include <fennix/syscall.h>
 
 #define KEYQUEUE_SIZE 16
 
@@ -68,13 +68,13 @@ void DG_Init()
 
 void DG_DrawFrame()
 {
-	syscall1(_Print, 'H');
+	syscall1(sys_Print, 'H');
 		// StretchDIBits(s_Hdc, 0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, 0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, DG_ScreenBuffer);
 }
 
 void DG_SleepMs(uint32_t ms)
 {
-	syscall1(_Sleep, ms);
+	syscall1(sys_Sleep, ms);
 }
 
 uint32_t DG_GetTicksMs()
@@ -107,13 +107,13 @@ int DG_GetKey(int* pressed, unsigned char* doomKey)
 void DG_SetWindowTitle(const char * title)
 {
 	for (int i = 0; i < 14; i++)
-		syscall1(_Print, "Window Title: "[i]);
+		syscall1(sys_Print, "Window Title: "[i]);
 
 	for (int i = 0; title[i] != '\0'; i++)
 	{
-		syscall1(_Print, title[i]);
+		syscall1(sys_Print, title[i]);
 	}
-	syscall1(_Print, '\n');
+	syscall1(sys_Print, '\n');
 }
 
 int main(int argc, char **argv)

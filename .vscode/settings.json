@@ -1,0 +1,10 @@
+{
+	"files.associations": {
+		"*.su": "tsv",
+		"deh_main.h": "c",
+		"st_stuff.h": "c",
+		"p_local.h": "c",
+		"limits.h": "c",
+		"syscall.h": "c"
+	}
+}

@@ -28,8 +28,8 @@
 
 void M_ClearBox (fixed_t *box)
 {
-    box[BOXTOP] = box[BOXRIGHT] = INT_MIN;
-    box[BOXBOTTOM] = box[BOXLEFT] = INT_MAX;
+    box[BOXTOP] = box[BOXRIGHT] = (-__INT_MAX__ - 1);
+    box[BOXBOTTOM] = box[BOXLEFT] = __INT_MAX__;
 }
 
 void

@@ -32,7 +32,7 @@ FILENAME = doom
 
 HEADERS = $(sort $(dir $(wildcard $(WORKSPACE)out/usr/include/*)))
 
-LDFLAGS =
+LDFLAGS = -Wl,-rpath,'$(WORKSPACE)out/lib/'
 CFLAGS = -I$(WORKSPACE)out/usr/include			\
 	-DGIT_COMMIT='"$(GIT_COMMIT)"'				\
 	-DGIT_COMMIT_SHORT='"$(GIT_COMMIT_SHORT)"'

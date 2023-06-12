@@ -349,7 +349,7 @@ int I_GetPaletteIndex (int r, int g, int b)
     printf("I_GetPaletteIndex\n");
 
     best = 0;
-    best_diff = INT_MAX;
+    best_diff = __INT_MAX__;
 
     for (i = 0; i < 256; ++i)
     {

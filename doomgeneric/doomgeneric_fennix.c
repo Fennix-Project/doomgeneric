@@ -68,7 +68,7 @@ void DG_Init()
 
 void DG_DrawFrame()
 {
-	syscall1(sys_Print, 'H');
+	// syscall1(sys_Print, 'H');
 		// StretchDIBits(s_Hdc, 0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, 0, 0, DOOMGENERIC_RESX, DOOMGENERIC_RESY, DG_ScreenBuffer);
 }
 
@@ -106,14 +106,14 @@ int DG_GetKey(int* pressed, unsigned char* doomKey)
 
 void DG_SetWindowTitle(const char * title)
 {
-	for (int i = 0; i < 14; i++)
-		syscall1(sys_Print, "Window Title: "[i]);
+	// for (int i = 0; i < 14; i++)
+	// 	syscall1(sys_Print, "Window Title: "[i]);
 
-	for (int i = 0; title[i] != '\0'; i++)
-	{
-		syscall1(sys_Print, title[i]);
-	}
-	syscall1(sys_Print, '\n');
+	// for (int i = 0; title[i] != '\0'; i++)
+	// {
+	// 	syscall1(sys_Print, title[i]);
+	// }
+	// syscall1(sys_Print, '\n');
 }
 
 int main(int argc, char **argv)

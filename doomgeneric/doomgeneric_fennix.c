@@ -74,7 +74,7 @@ void DG_DrawFrame()
 
 void DG_SleepMs(uint32_t ms)
 {
-	syscall1(sys_Sleep, ms);
+	// syscall1(sys_Sleep, ms);
 }
 
 uint32_t DG_GetTicksMs()
